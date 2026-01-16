@@ -1,23 +1,19 @@
 :root{
-  /* colors */
   --bg:#ffffff;
   --fg:#000000;
-  --muted:#111111;         /* quasi nero, per ridurre "morbidezza" */
+  --muted:#111111;
   --hairline: rgba(0,0,0,.12);
   --accent:#2F6BFF;
 
-  /* layout */
-  --max: 760px;            /* leggermente più "autorevole" */
+  --max: 760px;
   --pad-x: 24px;
   --pad-top: 84px;
   --pad-bottom: 96px;
 
-  /* type */
   --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --fz: 18px;
   --lh: 1.72;
 
-  /* scale */
   --space-1: 10px;
   --space-2: 16px;
   --space-3: 22px;
@@ -25,14 +21,11 @@
   --space-5: 64px;
   --space-6: 84px;
 
-  /* weights */
   --w-regular: 400;
   --w-semibold: 600;
 
-  /* radius (quasi nullo) */
   --r: 2px;
 
-  /* underline */
   --u-thick: 1px;
   --u-offset: 3px;
 }
@@ -58,6 +51,8 @@ a{
   text-underline-offset: var(--u-offset);
 }
 
+a:visited{ color: var(--fg); }
+
 a:hover{
   text-decoration-color: var(--accent);
 }
@@ -67,8 +62,6 @@ a:focus-visible{
   outline-offset: 3px;
   border-radius: var(--r);
 }
-
-a:visited{ color: var(--fg); }
 
 .wrapper{
   max-width: var(--max);
@@ -128,9 +121,15 @@ blockquote p{
 }
 
 hr{
-  border:0;
+  border: 0;
   border-top: 1px solid var(--hairline);
   margin: var(--space-6) 0;
+}
+
+.small{
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--muted);
 }
 
 .list{
@@ -141,10 +140,4 @@ hr{
 
 .list li{
   margin: 0 0 var(--space-2);
-}
-
-.small{
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--muted);
 }
